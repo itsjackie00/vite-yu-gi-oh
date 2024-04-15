@@ -26,15 +26,18 @@ import MainComponent from './components/MainComponent.vue'
     methods: {
       getCharacters(){
         axios.get(this.store.apiUrl ).then((res) => {
-          this.store.characters = res.data.data
+          this.store.card = res.data.data,
+          console.log(this.store)
+          
         })
-      }
+      },
     },
     created(){
     this.getCharacters();
   },
     mounted() {
-      console.log(this.store)
+      //console.log(this.store)
+     
     }
   }
 </script>
