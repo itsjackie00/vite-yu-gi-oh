@@ -1,10 +1,8 @@
 <template>
-    <div class="container">
-        <div class="row">
-
+    <div class="container" >
+        <div class="row" id="card-container" >
             <div class="col-12 col-md-6 col-lg-3 " v-for="card in store.card" :key="card.id">
-    
-                <CardComponent :id="card.id" :title="card.name" :image="card.card_images[0].image_url" /> 
+                <CardComponent :id="card.id" :title="card.name" :status="card.archetype" :image="card.card_images[0].image_url" /> 
                 
             </div>
         </div>
@@ -30,5 +28,9 @@ import CardComponent from './CardComponent.vue';
 </script>
 
 <style lang="scss" scoped>
+#card-container{
+    padding: 50px;
+    background-color: white;
 
+}
 </style>
