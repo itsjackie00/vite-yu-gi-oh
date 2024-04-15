@@ -1,25 +1,40 @@
 
 <template>
   <HeaderComponents/>
+  <MainComponent/>
 </template>
+
 
 <script>
 import {store} from './store.js';
+import axios from 'axios';
 
-  import HeaderComponents from './components/HeaderComponents.vue';
+import HeaderComponents from './components/HeaderComponents.vue'
+import MainComponent from './components/MainComponent.vue'
 
   export default {
     name: 'App',
     components: {
-      HeaderComponents
+      HeaderComponents,
+      MainComponent
     },
     data() {
       return {
         store
       }
     },
+    methods: {
+      getCharacters(){
+        axios.get(this.store.apiUrl ).then((res) => {
+          this.store.characters = res.data.data
+        })
+      }
+    },
+    created(){
+    this.getCharacters();
+  },
     mounted() {
-      console.log(this.store);
+      console.log(this.store)
     }
   }
 </script>
