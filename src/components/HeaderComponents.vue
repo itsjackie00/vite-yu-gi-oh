@@ -1,21 +1,23 @@
 <template>
     <header>
-        <h1>Ciao</h1>
+        <h1>Yu-Gi-Oh API</h1>
+        
     </header>
 </template>
 
 <script>
-    export default {
-        name: 'HeaderComponents',
-        data(){
-            return {
-               
-            }
-        },
-        mounted() {
-           
+export default {
+    name: 'HeaderComponents',
+    
+    data() {
+        return {
+
         }
+    },
+    mounted() {
+
     }
+}
 </script>
 
 <style lang="scss" scoped>
