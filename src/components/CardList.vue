@@ -1,8 +1,6 @@
 <template>
-    <div class="container" >
-        <div>
-            <h4 class="bg-dark text-white">Found  cards</h4>
-        </div>
+    <div class="container">
+        <h4 class="bg-dark text-white p-3 ">Found  cards</h4>
         <div class="row" id="card-container" >
             <div class="col-12 col-md-6 col-lg-3 " v-for="card in store.card" :key="card.id">
                 <CardComponent :id="card.id" :title="card.name" :status="card.archetype" :image="card.card_images[0].image_url" /> 
