@@ -5,7 +5,6 @@
             <h5 class="card-title text-white ">{{ title }}</h5>
             <p class="card-text">
                 <span>{{ status }}</span>
-                <br>
             </p>
         </div>
     </div>
